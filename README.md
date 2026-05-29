@@ -46,6 +46,21 @@ After preprocessing, the processed files are created in:
 ```text
 data/processed/
 ```
+## Dataset Statistics
+
+The dataset is nearly perfectly balanced.
+
+| Split | Human | Machine | Total |
+|---|---:|---:|---:|
+| Train | 64,535 | 64,531 | 129,066 |
+| Evaluation | 10,756 | 10,755 | 21,511 |
+
+Text length statistics:
+
+| Class | Average word length | Median word length | Average character length | Median character length |
+|---|---:|---:|---:|---:|
+| Human | 30.07 | 13.00 | 221.47 | 95.00 |
+| Machine | 31.85 | 14.00 | 236.91 | 99.00 |
 
 ## Project Structure
 
@@ -188,6 +203,11 @@ results/results_rubert.csv
 results/figures/class_distribution.png
 results/figures/text_length_distribution.png
 results/figures/model_comparison.png
+results/dataset_stats.csv
+results/text_length_stats.csv
+results/errors_best_model.csv
+results/false_positives.csv
+results/false_negatives.csv
 ```
 
 ## Report
