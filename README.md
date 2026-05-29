@@ -72,22 +72,29 @@ RuATD/
 The following models are compared:
 
 1. Majority baseline
-2. TF-IDF + Logistic Regression
-3. TF-IDF + Linear SVM
-4. RuBERT-tiny2
+2. Word TF-IDF + Logistic Regression
+3. Word TF-IDF + Linear SVM
+4. Char TF-IDF + Logistic Regression
+5. Char TF-IDF + Linear SVM
+6. Word+Char TF-IDF + Logistic Regression
+7. RuBERT-tiny2
 
 RuBERT-tiny2 was fine-tuned on a 10,000-example subset of the training data for 1 epoch due to computational limitations.
+
 
 ## Results
 
 | Model | Accuracy | Macro Precision | Macro Recall | Macro F1 |
 |---|---:|---:|---:|---:|
-| TF-IDF + Logistic Regression | 0.6724 | 0.6724 | 0.6724 | 0.6724 |
-| TF-IDF + Linear SVM | 0.6635 | 0.6635 | 0.6635 | 0.6635 |
+| Word+Char TF-IDF + Logistic Regression | 0.7036 | 0.7036 | 0.7036 | 0.7036 |
+| Char TF-IDF + Logistic Regression | 0.6976 | 0.6976 | 0.6976 | 0.6976 |
+| Char TF-IDF + Linear SVM | 0.6923 | 0.6923 | 0.6923 | 0.6923 |
+| Word TF-IDF + Logistic Regression | 0.6723 | 0.6724 | 0.6723 | 0.6723 |
+| Word TF-IDF + Linear SVM | 0.6634 | 0.6634 | 0.6634 | 0.6634 |
 | RuBERT-tiny2 | 0.6294 | 0.6298 | 0.6294 | 0.6291 |
 | Majority baseline | 0.5000 | 0.2500 | 0.5000 | 0.3333 |
 
-The best model in this experiment is TF-IDF + Logistic Regression.
+The best model in this experiment is Word+Char TF-IDF + Logistic Regression.
 
 ## Installation
 
