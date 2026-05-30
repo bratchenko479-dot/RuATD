@@ -180,7 +180,20 @@ This script combines all results into:
 results/results.csv
 ```
 
-### 5. Create plots
+### 5. Error Analysis
+
+For the best model, Word+Char TF-IDF + Logistic Regression, we saved predictions and inspected classification errors.
+
+| Error type | Count |
+|---|---:|
+| Total errors | 6,376 |
+| False positives | 3,213 |
+| False negatives | 3,163 |
+
+False positives are human-written texts classified as machine-generated. Many of them have formal, bureaucratic, or news-like style.
+
+False negatives are machine-generated texts classified as human-written. Many of them are short, fluent, or written in a historical or encyclopedic style.
+### 6. Create plots
 
 ```bash
 python src/make_plots.py
@@ -205,6 +218,7 @@ results/figures/text_length_distribution.png
 results/figures/model_comparison.png
 results/dataset_stats.csv
 results/text_length_stats.csv
+results/error_summary.csv
 results/errors_best_model.csv
 results/false_positives.csv
 results/false_negatives.csv
